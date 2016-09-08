@@ -1,0 +1,126 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* ecoservice_partner_account_company
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-19 14:26+0000\n"
+"PO-Revision-Date: 2013-09-19 14:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:49
+#: sql_constraint:ecoservice.partner.auto.account.company:0
+#, python-format
+msgid "The configuration must be unique per company !"
+msgstr "Die Konfiguration muss einzigartig pro Firma sein!"
+
+#. module: ecoservice_partner_account_company
+#: field:ecoservice.partner.auto.account.company,receivable_template_id:0
+msgid "Receivable account Template"
+msgstr "Debitoren Template"
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:51
+#: sql_constraint:ecoservice.partner.auto.account.company:0
+#, python-format
+msgid "The Receivable Sequence account must be unique per configuration"
+msgstr "Die Debitorensequenz muss pro Firma einzigartig sein"
+
+#. module: ecoservice_partner_account_company
+#: view:res.partner:0
+msgid "Create Payable Account"
+msgstr "Kreditoren Konto erzeugen"
+
+#. module: ecoservice_partner_account_company
+#: field:ecoservice.partner.auto.account.company,company_id:0
+msgid "Company"
+msgstr "Firma"
+
+#. module: ecoservice_partner_account_company
+#: field:ecoservice.partner.auto.account.company,payable_template_id:0
+msgid "Payable account Template"
+msgstr "Kreditoren Template"
+
+#. module: ecoservice_partner_account_company
+#: model:ir.model,name:ecoservice_partner_account_company.model_ecoservice_partner_auto_account_company
+msgid "Configuration rules for automatic account generation"
+msgstr "Regeln für die automatische Kontengenerierung"
+
+#. module: ecoservice_partner_account_company
+#: field:ecoservice.partner.auto.account.company,payable_sequence_id:0
+msgid "Payable Sequence"
+msgstr "Kreditoren Sequence"
+
+#. module: ecoservice_partner_account_company
+#: view:ecoservice.partner.auto.account.company:0
+#: model:ir.actions.act_window,name:ecoservice_partner_account_company.ecoservice_partner_auto_account_company_action
+#: model:ir.ui.menu,name:ecoservice_partner_account_company.ecoservice_partner_auto_account_company_menu
+msgid "Automatic account generation"
+msgstr "Automatische Kontengenerierung"
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:50
+#: sql_constraint:ecoservice.partner.auto.account.company:0
+#, python-format
+msgid "The Payable Sequence account must be unique per configuration"
+msgstr "Die Kreditorensequenz muss in der Konfiguration einzigartig sein."
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:54
+#: constraint:ecoservice.partner.auto.account.company:0
+#, python-format
+msgid "The companys in the Sequences are not the same as the configured Company"
+msgstr "Die Firma der Sequenzen ist nicht die der Konfiguration"
+
+#. module: ecoservice_partner_account_company
+#: model:ir.model,name:ecoservice_partner_account_company.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: ecoservice_partner_account_company
+#: view:res.partner:0
+msgid "Create Receivable Account"
+msgstr "Debitoren Konto erzeugen"
+
+#. module: ecoservice_partner_account_company
+#: field:ecoservice.partner.auto.account.company,receivable_sequence_id:0
+msgid "Receivable Sequence"
+msgstr "Debitoren Sequenz"
+
+#. module: ecoservice_partner_account_company
+#: field:res.partner,receivable_account_created:0
+msgid "Receivable account created"
+msgstr "Debitoren Konto ist erstellt"
+
+#. module: ecoservice_partner_account_company
+#: field:res.partner,payable_account_created:0
+msgid "Payable account created"
+msgstr "Kreditoren Konto ist erstellt"
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:160
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:162
+#, python-format
+msgid "Warning"
+msgstr "Warnung"
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:162
+#, python-format
+msgid "Couldn't create receivable account. It already exists!"
+msgstr "Es kann kein Debitoren Konto erstellt werden, weil es schon erstellt wurde!"
+
+#. module: ecoservice_partner_account_company
+#: code:addons/ecoservice_partner_account_company/ecoservice_partner_auto_account_company.py:160
+#, python-format
+msgid "Couldn't create payable account. It already exists!"
+msgstr "Es kann kein Kreditoren Konto erstellt werden, weil es schon erstellt wurde!"
+
