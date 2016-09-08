@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+  <record id="invoice_supplier_form_inherited_sepa_payment" model="ir.ui.view">
+    <field name="name">account.invoice.supplier.form.inherited.sepa.payment</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_supplier_form"/>
+    <field name="arch" type="xml">
+      <field name="date_due" position="after">
+        <field name="sepa_payment_sent"/>
+      </field>
+    </field>
+  </record>
+
+  <record id="invoice_supplier_tree_inherited_sepa_payment" model="ir.ui.view">
+    <field name="name">account.invoice.supplier.tree.inherited.sepa.payment</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+    <field name="arch" type="xml">
+      <field name="state" position="after">
+        <field name="sepa_payment_sent"/>
+      </field>
+    </field>
+  </record>
+
+  <record id="view_account_invoice_filter_inherited_sepa_payment" model="ir.ui.view">
+    <field name="name">account.invoice.select.inherited.sepa.payment</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+    <field name="arch" type="xml">
+      <search position="inside">
+        <filter domain="[('state', '=', 'open'), ('sepa_payment_sent', '=', False)]" string="SEPA unsent"/>
+      </search>
+    </field>
+  </record>
+
+</odoo>

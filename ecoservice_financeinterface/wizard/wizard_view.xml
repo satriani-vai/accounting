@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+##############################################################################
+#    ecoservice_financeinterface
+#    Copyright (c) 2013 ecoservice GbR (<http://www.ecoservice.de>).
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    This program based on OpenERP.
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
+##############################################################################
+-->
+<openerp>
+<data>
+
+        <record id="export_ecofi_view" model="ir.ui.view">
+             <field name="name">Create Financial Export</field>
+             <field name="model">export.ecofi</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                <form string="Financial Export">
+                    <field name="vorlauf_id" colspan="4"  attrs="{'invisible': [('vorlauf_id','=',False)]}"/>
+                    <field name="journal_id" colspan="4" attrs="{'invisible': [('vorlauf_id','!=',False)], 'required': [('vorlauf_id','=',False)]}"/>
+                    <field name="export_type"/>
+                    <newline/>
+	                <field name="date_from" colspan="4" attrs="{'invisible': ['|', ('vorlauf_id','!=',False), ('export_type','!=', 'date')], 'required': [('vorlauf_id','=',False), ('export_type','=', 'date')]}"/>
+	                <field name="date_to" colspan="4" attrs="{'invisible': ['|', ('vorlauf_id','!=',False), ('export_type','!=', 'date')], 'required': [('vorlauf_id','=',False), ('export_type','=', 'date')]}"/>
+                    <button icon="gtk-cancel" special="cancel" string="Cancel" colspan="2"/>
+					<button icon="gtk-ok" string="Start Export" name="startexport" type="object"/>
+                </form>
+             </field>
+         </record>
+
+        <record id="ecoservice_ecofi_export_wizard" model="ir.actions.act_window">
+             <field name="name">Create Financial Export</field>
+             <field name="res_model">export.ecofi</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">tree,form</field>
+             <field name="view_id" ref="export_ecofi_view"/>
+             <field name="target">new</field>
+       </record>
+
+        <menuitem
+            icon="STOCK_EXECUTE"
+            name="Create Financial Export"
+            action="ecoservice_ecofi_export_wizard"
+            id="ecoservice_ecofi_wizard_menu"
+            parent="menu_finance_interface"
+            groups="group_ecofi_financeinterface"/>
+
+       <act_window name="Create Financial Export"
+            res_model="export.ecofi"
+            src_model="ecofi"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"
+            id="action_create_export_from_ecofi"/>
+
+ 
+        
+</data>
+</openerp>
+

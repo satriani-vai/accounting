@@ -1,0 +1,356 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* ecoservice_financeinterface
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 13:08+0000\n"
+"PO-Revision-Date: 2013-03-08 13:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:330
+#, python-format
+msgid "Error: %s"
+msgstr "Fehler: %s"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,account_moves:0
+msgid "Account Moves"
+msgstr "Buchungssätze"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:300
+#, python-format
+msgid "This export is conducted under the Vorlaufname: %s"
+msgstr "Exportname: %s"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:328
+#, python-format
+msgid "Warnings: %s"
+msgstr "Warnungen: %s"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_account_tax
+msgid "Tax"
+msgstr "Steuer"
+
+#. module: ecoservice_financeinterface
+#: model:ir.actions.act_window,name:ecoservice_financeinterface.act_ecofi_2_res_partner
+msgid "Partner with Error"
+msgstr "Fehlerhafte Partner"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,csv_file:0
+msgid "Export CSV"
+msgstr "CSV Datei"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,name:0
+msgid "Exportname"
+msgstr "Exportname"
+
+#. module: ecoservice_financeinterface
+#: view:res.company:0
+#: model:res.groups,name:ecoservice_financeinterface.group_ecofi_financeinterface
+msgid "Financeinterface"
+msgstr "Finanzinterface"
+
+#. module: ecoservice_financeinterface
+#: field:account.move.line,ecofi_manual:0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_export_ecofi
+msgid "Financeexport"
+msgstr "Financeexport"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:87
+#, python-format
+msgid "The sum of the account lines debit/credit and the account_counterpart lines debit/credit is no Zero!"
+msgstr "Die zu den Gegenkonten zugewiesenen Buchungszeilen gleichen sich nicht aus!"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:113
+#, python-format
+msgid "You cannot modify an already exported move."
+msgstr "Sie können einen bereits exportierten Buchungssatz nicht bearbeiten."
+
+#. module: ecoservice_financeinterface
+#: view:ecofi:0
+#: view:export.ecofi:0
+msgid "Financial Export"
+msgstr "Finanzexport"
+
+#. module: ecoservice_financeinterface
+#: model:ir.ui.menu,name:ecoservice_financeinterface.menu_finance_interface
+#: field:res.company,finance_interface:0
+msgid "Finance Interface"
+msgstr "Finanzinterface"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:82
+#, python-format
+msgid "Not all move lines have an account and an account counterpart defined."
+msgstr "Nicht alle Buchungszeilen haben ein Gegenkonto definiert."
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:129
+#, python-format
+msgid "You can not create tax lines in an auto tax move."
+msgstr "Eine Steuerzeile kann im automatischen Steuermodus nicht manuell angelegt werden."
+
+#. module: ecoservice_financeinterface
+#: field:export.ecofi,journal_id:0
+#: field:res.company,journal_ids:0
+msgid "Journal"
+msgstr "Journal"
+
+#. module: ecoservice_financeinterface
+#: model:ir.actions.act_window,name:ecoservice_financeinterface.act_ecofi_2_account_move
+msgid "Move with Error"
+msgstr "Fehlerhafte Buchungen"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_ecofi
+msgid "Ecoservice Financial Interface"
+msgstr "Ecoservice Finanzinterface"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,csv_file_fname:0
+msgid "Stored Filename"
+msgstr "Dateiname"
+
+#. module: ecoservice_financeinterface
+#: model:ir.actions.act_window,name:ecoservice_financeinterface.eco_ecofi_action
+#: model:ir.ui.menu,name:ecoservice_financeinterface.menu_eco_ecofi
+msgid "Financial Exports"
+msgstr "Finanzexports"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,partner_error_ids:0
+msgid "Partner Errors"
+msgstr "Fehlerhafte Partner"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_account_move_line
+msgid "Journal Items"
+msgstr "Buchungen"
+
+#. module: ecoservice_financeinterface
+#: field:account.move.line,ecofi_brutto_credit:0
+msgid "Amount Credit Brutto"
+msgstr "Haben Brutto"
+
+#. module: ecoservice_financeinterface
+#: view:res.company:0
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,journale:0
+msgid "Journals"
+msgstr "Journale"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:326
+#, python-format
+msgid "Edited posting lines: %s"
+msgstr "Bearbeitete Buchungszeilen: %s"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:324
+#, python-format
+msgid "Edited posting record : %s"
+msgstr "Buchungssätze bearbeitet: %s"
+
+#. module: ecoservice_financeinterface
+#: field:export.ecofi,vorlauf_id:0
+msgid "Vorlauf"
+msgstr "Vorlauf"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:339
+#, python-format
+msgid "No posting records found"
+msgstr "Keine Buchungssätze gefunden"
+
+#. module: ecoservice_financeinterface
+#: field:account.move,ecofi_autotax:0
+msgid "Automatic Tax Lines"
+msgstr "Automatische Steuerzeilen"
+
+#. module: ecoservice_financeinterface
+#: model:ir.actions.act_window,name:ecoservice_financeinterface.action_create_export_from_ecofi
+#: model:ir.actions.act_window,name:ecoservice_financeinterface.ecoservice_ecofi_export_wizard
+#: model:ir.ui.menu,name:ecoservice_financeinterface.ecoservice_ecofi_wizard_menu
+msgid "Create Financial Export"
+msgstr "Finanzexport erzeugen"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_res_company
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: ecoservice_financeinterface
+#: view:export.ecofi:0
+msgid "Start Export"
+msgstr "Export starten"
+
+#. module: ecoservice_financeinterface
+#: field:account.move.line,ecofi_move_line_autotax:0
+msgid "Move Counterpart"
+msgstr "Gegenkonto"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:113
+#: code:addons/ecoservice_financeinterface/account.py:129
+#, python-format
+msgid "Error!"
+msgstr "Fehler!"
+
+#. module: ecoservice_financeinterface
+#: field:account.invoice,ecofi_buchungstext:0
+#: field:account.move,ecofi_buchungstext:0
+msgid "Export Voucher Text"
+msgstr "Export Buchungstext"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:302
+#: code:addons/ecoservice_financeinterface/account.py:311
+#, python-format
+msgid "Error"
+msgstr "Fehler"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:179
+#: code:addons/ecoservice_financeinterface/ecofi.py:195
+#, python-format
+msgid "The main account of the booking could not be resolved, the move has %s credit- and %s debitlines!"
+msgstr "Das Hauptkonto des Buchungssatzes konnte nicht bestimmt werden, der Buchungssatz hat %s Soll- und %s Habenbuchungsszeilen!"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:58
+#, python-format
+msgid "Account moves which are already in an export can not be deleted!"
+msgstr "Buchungssätze die exportiert wurden können nicht gelöscht werden!"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,note:0
+msgid "Comment"
+msgstr "Kommentar"
+
+#. module: ecoservice_financeinterface
+#: field:account.move.line,ecofi_account_counterpart:0
+msgid "Account Counterpart"
+msgstr "Gegenkonto"
+
+#. module: ecoservice_financeinterface
+#: field:export.ecofi,date_from:0
+msgid "Date From"
+msgstr "Datum von"
+
+#. module: ecoservice_financeinterface
+#: field:export.ecofi,date_to:0
+msgid "Date To"
+msgstr "Datum bis"
+
+#. module: ecoservice_financeinterface
+#: field:export.ecofi,export_type:0
+msgid "Export Type"
+msgstr "Export Typ"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_account_move
+msgid "Account Entry"
+msgstr "Buchungssatz"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:267
+#: code:addons/ecoservice_financeinterface/ecofi.py:274
+#, python-format
+msgid "There is no journal for the ecofi_export configured!"
+msgstr "Kein Journal für den Export konfiguriert!"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:302
+#: code:addons/ecoservice_financeinterface/account.py:311
+#, python-format
+msgid "There can only be one tax per invoice line"
+msgstr "Es darf nur eine Steuer pro Zeile ausgewählt werden"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_account_payment_term
+msgid "Payment Term"
+msgstr "Zahlungsbedingung"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Rechungsposition"
+
+#. module: ecoservice_financeinterface
+#: field:ecofi,move_error_ids:0
+msgid "Move Errors"
+msgstr "Fehlerhafte Buchungssätze"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:65
+#, python-format
+msgid "Exports cannot be duplicated."
+msgstr "Exporte dürfen nicht dupliziert werden."
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:321
+#, python-format
+msgid "Export finished"
+msgstr "Export beendet"
+
+#. module: ecoservice_financeinterface
+#: field:account.move,vorlauf_id:0
+msgid "Export"
+msgstr "Export"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/account.py:58
+#: code:addons/ecoservice_financeinterface/ecofi.py:65
+#, python-format
+msgid "Warning!"
+msgstr "Warnung!"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model,name:ecoservice_financeinterface.model_account_invoice
+msgid "Invoice"
+msgstr "Rechnung"
+
+#. module: ecoservice_financeinterface
+#: field:account.move.line,ecofi_taxid:0
+msgid "Move Tax"
+msgstr "Move Tax"
+
+#. module: ecoservice_financeinterface
+#: view:export.ecofi:0
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: ecoservice_financeinterface
+#: field:account.move.line,ecofi_brutto_debit:0
+msgid "Amount Debit Brutto"
+msgstr "Soll Brutto"
+
+#. module: ecoservice_financeinterface
+#: code:addons/ecoservice_financeinterface/ecofi.py:303
+#, python-format
+msgid "Start export"
+msgstr "Export gestartet"
+

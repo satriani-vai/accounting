@@ -1,0 +1,5 @@
+WKZ,Umsatz,S/H,Gegenkonto,BU,Belegfeld1,Belegfeld2,Datum,Konto,Skonto,Buchungstext
+EUR,"120,5",S,212100,,Belegfeld1,Belegfeld2,18.04.14,101500,5,Testbuchung Haben
+EUR,"190,5",H,212100,,Belegfeld1,Belegfeld2,20.04.14,101600,5,Testbuchung Soll
+USD,"120,5",S,212100,,Belegfeld1,Belegfeld2,18.04.14,101500,5,Testbuchung Haben USD
+EUR,"190,5",S,212100,,Belegfeld1,Belegfeld2,20.04.14,101600,5,Testbuchung Soll

@@ -1,0 +1,24 @@
+# This file is part of Odoo. The COPYRIGHT file at the top level of
+# this module contains the full copyright and licensing details.
+#
+# This file contains the translation of the following modules:
+#	* ecoservice_compacted_account_move_lines
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-31 11:44+0200\n"
+"PO-Revision-Date: 2016-05-31 11:44+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecoservice_compacted_account_move_lines
+#: code:addons/ecoservice_compacted_account_move_lines/account_move.py:0
+#, python-format
+msgid "Summarized per Invoice: {}"
+msgstr "Zusammengefasst aus Rechnung: {}"
