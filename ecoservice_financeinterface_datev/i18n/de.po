@@ -1,0 +1,122 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* ecoservice_financeinterface_datev
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-08 13:14+0000\n"
+"PO-Revision-Date: 2016-03-29 13:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.account,stuebergabe:0
+msgid "Datev VAT-ID"
+msgstr "Datev UST-ID"
+
+#. module: ecoservice_financeinterface_datev
+#: help:account.account,ustuebergabe:0
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "Is required when transferring a sales tax identification number from the account partner (e.g. EU-Invoice)"
+msgstr "Wird benötigt, wenn die Umsatzsteueridentifikationsnummer des Konten-Partners übermittelt wird (z.B. EU-Rechnung)"
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.account,automatic:0
+msgid "Datev Automatic Account"
+msgstr "Datev Automatikkonto"
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.account,datev_steuer:0
+msgid "Datev Tax Account"
+msgstr "Datev Steuerkonto"
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.account,datev_steuer_erforderlich:0
+msgid "Tax posting required?"
+msgstr "Steuerbuchung erforderlich?"
+
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.tax,datev_skonto:0
+msgid "Datev Cashback Account"
+msgstr "Datev Skontokonto"
+
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.payment.term,zahlsl:0
+msgid "Payment key"
+msgstr "Datev Zahlungsschlüssel"
+
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.move,enable_datev_checks:0
+#: field:account.invoice,enable_datev_checks:0
+#: field:res.company,enable_datev_checks:0
+msgid "Perform Datev Checks"
+msgstr "Datev-Checks durchführen"
+
+
+#. module: ecoservice_financeinterface_datev
+#: field:account.move.line,ecofi_bu:0
+msgid "Datev BU"
+msgstr "Datev BU"
+
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "The account {account} is an Auto-Account but the automatic taxes are not configured!"
+msgstr "Das Konto {account} ist ein Automatikkonto, aber die automatischen Steuern sind nicht konfiguriert!"
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "The Account requires a tax but the move line {line} has no tax!"
+msgstr "Das Konto benötigt eine Steuerbuchung, allerdings ist in Zeile {line} keine Steuer definiert!"
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "The account is an Auto-Account but the tax account ({line}) in the move line {tax_line} differs from the configured {tax_datev}!"
+msgstr "Das Konto ist als Automatikkonto definiert, allerdings unterscheidet sich die Steuer ({line}) in der Buchungszeile {tax_line} von der vorkonfigurierten {tax_datev}!"
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "The booking key for the tax {tax} is not configured!"
+msgstr "Der Buchungsschlüssel für die Steuer {tax} ist nicht konfiguriert!"
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "The Account is an Auto-Account but the move line {line} has no tax!"
+msgstr "Das Konto ist ein Automatikkonto, allerdings ist in Buchungszeile {line} keine Steuer definiert!"
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account.py:0
+msgid "The sums for booked ({real}) and calculated ({datev}) are different!"
+msgstr "Die Summen der gebuchten ({real}) und der berechneten ({datev}) Steuer unterscheiden sich!"
+
+
+#. module: ecoservice_financeinterface_datev
+#: code:addons/ecoservice_financeinterface_datev/account_invoice.py:0
+msgid "Line {line}: The taxes specified in the invoice line ({tax_line}) and the corresponding account ({tax_account}) mismatch!"
+msgstr "Position {line}: Die Steuern, die in der Rechnungsposition ({tax_line}) und dem entsprechenden Konto ({tax_account}) spezifiziert wurden, stimmen nicht überein!"
+
+
+#. module: ecoservice_financeinterface_datev
+#: selection:res.company,exportmethod:0
+msgid "brutto"
+msgstr "brutto"
+
+#. module: ecoservice_financeinterface_datev
+#: selection:res.company,exportmethod:0
+msgid "netto"
+msgstr "netto"
+
+#. module: ecoservice_financeinterface_datev
+#: field:res.company,exportmethod:0
+msgid "Export method"
+msgstr "Exportmethode"
