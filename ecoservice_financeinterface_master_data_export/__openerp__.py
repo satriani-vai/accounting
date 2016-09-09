@@ -21,7 +21,7 @@
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 {
-    "name" : "Ecoservice Financial Interface Datev Exports",
+    "name" : "ecoservice: Datev Exports Master Data",
     "version" : "1.0",
     "depends" : ["ecoservice_financeinterface"],
     "author" : "ecoservice",
@@ -33,8 +33,7 @@ Details of the module:
 * Export of Debit and Credit Account
 
 Further information under
-* Launchpad https://launchpad.net/ecoservice-openerp-addons
-* Ecoservice Website http://www.ecoservice.de
+* https://www.ecoservice.de/page/odoo-datev
 """,
     "category" : "Accounting",
     "init_xml" : [],

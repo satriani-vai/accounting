@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Ecoservice SEPA Payment',
+    'name': 'ecoservice: SEPA Payment',
     'version': '9.0.0.1.0',
     'category': 'Accounting & Finance',
     'summary': u"SEPA extension to block a payment from being booked.",

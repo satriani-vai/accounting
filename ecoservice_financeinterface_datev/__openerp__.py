@@ -21,11 +21,12 @@
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 {# pylint: disable-msg=W0104
-    "name" : "Ecoservice Financial Interface Datev",
+    "name" : "ecoservice: Financial Interface Datev",
     "version" : "9.0.1.1",
     "depends" : ["ecoservice_financeinterface", "mail"],
     "author" : "ecoservice",
     "website" : "www.ecoservice.de",
+    "summary"    : "Export of account moves to Datev",
     "description": """The module ecoservice_financeinterface_datev provides methods to convert account moves to the Datevformat (Datev Dok.-Nr.: 1036228).
 
 Details of the module:
@@ -33,8 +34,7 @@ Details of the module:
 * Test of datev accounting rules
  
 Further information under 
-* Launchpad https://launchpad.net/ecoservice-openerp-addons
-* Ecoservice Website http://www.ecoservice.de
+* https://www.ecoservice.de/page/odoo-datev
 """,
     "category" : "Accounting",
     "init_xml" : [],

@@ -21,7 +21,7 @@
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 {
-    "name" : "Ecoservice Partner Account Company",
+    "name" : "ecoservice: Partner Account Company",
     "version" : "1.0",
     "author" : "ecoservice",
     "category" : "Accounting",

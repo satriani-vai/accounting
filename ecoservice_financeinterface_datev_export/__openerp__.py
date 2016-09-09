@@ -21,20 +21,20 @@
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 {
-    "name" : "Ecoservice Financial Interface Datev Exports",
+    "name" : "ecoservice: Datev Exports",
     "version" : "1.0",
     "depends" : ["ecoservice_financeinterface"],
     "author" : "ecoservice",
     "website" : "www.ecoservice.de",
-    "description": """The module ecoservice_financeinterface_datev_export lets you configure different ascii base data exports.
+    "summary"    : "Export of Master Data to Datev",
+    "description": """The module ecoservice_financeinterface_datev_export allows you to export your Master Data to Datev.
 
 Details of the module:
 * Export of Paymentterms
 * Export of Debit and Credit Account
 
 Further information under
-* Launchpad https://launchpad.net/ecoservice-openerp-addons
-* Ecoservice Website http://www.ecoservice.de
+* https://www.ecoservice.de/page/odoo-datev
 """,
     "category" : "Accounting",
     "init_xml" : [],

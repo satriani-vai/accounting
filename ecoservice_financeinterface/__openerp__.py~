@@ -1,7 +1,7 @@
-# -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*- # pylint: disable-msg=C0111
 ##############################################################################
-#    ecoservice_partner_account_company_automatic
-#    Copyright (c) 2016 ecoservice GbR (<http://www.ecoservice.de>).
+#    ecoservice_financeinterface
+#    Copyright (c) 2013 ecoservice GbR (<http://www.ecoservice.de>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,19 +20,33 @@
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
-{
-    "name": "ecoservice: Partner Account Company Automatic",
+{  # pylint: disable-msg=W0104
+    "name": "Ecoservice Financial Interface",
     "version": "1.0",
+    "depends": ["base", "account"],
     "author": "ecoservice",
+    "website": "www.ecoservice.de",
+    "description": """The main modul ecoservice_finance provides the basic methods for the finance interface.
+
+Further information under
+* Launchpad https://launchpad.net/ecoservice-openerp-addons
+* Ecoservice Website http://www.ecoservice.de
+
+""",
     "category": "Accounting",
-    "website": "http://www.ecoservice.de",
-    "depends": ["ecoservice_partner_account_company",
-                "sale",
-                "purchase"],
-    "description": """If a partner is created a new debit and credit account will be created automatically.""",
     "init_xml": [],
+    "data": [
+                    'security/ecofi_security.xml',
+                    'security/ir.model.access.csv',
+                    'account_view.xml',
+                    'account_invoice_view.xml',
+                    'ecofi_sequence.xml',
+                    'ecofi_view.xml',
+                    'res_company_view.xml',
+                    'wizard/wizard_view.xml'
+                    ],
     "demo_xml": [],
-    "update_xml": [],
+    "test": [],
     "active": False,
     "installable": True
 }

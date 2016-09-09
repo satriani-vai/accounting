@@ -21,17 +21,23 @@
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 {  # pylint: disable-msg=W0104
-    "name": "Ecoservice Financial Interface",
+    "name": "ecoservice: Financial Interface",
     "version": "1.0",
     "depends": ["base", "account"],
     "author": "ecoservice",
-    "website": "www.ecoservice.de",
+    "website": "http://www.ecoservice.de",
+    "summary": "Main Modul for export of accounting moves",
     "description": """The main modul ecoservice_finance provides the basic methods for the finance interface.
 
 Further information under
-* Launchpad https://launchpad.net/ecoservice-openerp-addons
-* Ecoservice Website http://www.ecoservice.de
+* https://www.ecoservice.de/page/odoo-datev
 
+ecoservice
+Karl-Kellner-Str. 105J
+30853 Langenhagen
+Germany
+
+Phone: +49.511.700376-20
 """,
     "category": "Accounting",
     "init_xml": [],
