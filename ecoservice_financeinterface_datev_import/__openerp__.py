@@ -25,6 +25,7 @@ Further information under
         'views/import_datev.xml',
         'views/import_datev_menu.xml',
         'data/import_datev_sequence.xml',
+        'security/ir.model.access.csv',
     ],
     "installable": True,
 }
