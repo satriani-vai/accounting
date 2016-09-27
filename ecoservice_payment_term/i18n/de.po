@@ -1,0 +1,15 @@
+#. module: ecoservice_payment_term
+#: code:models/account.py:0
+#, python-format
+msgid "Until {date} with {note} = {amount}"
+msgstr "Bis zum {date} mit {note} = {amount}"
+
+#. module: ecoservice_payment_term
+#: model:ir.model.fields,field_description:ecoservice_payment_term.field_account_payment_term_line_note
+msgid "Note"
+msgstr "Beschreibung"
+
+#. module: ecoservice_payment_term
+#: model:ir.model.fields,field_description:ecoservice_payment_term.field_account_invoice_due_amount_text
+msgid "Overdue Payments"
+msgstr "Fällige Zahlungen"

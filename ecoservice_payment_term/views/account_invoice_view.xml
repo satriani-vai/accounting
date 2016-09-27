@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+#    ecoservice_payment_term
+#    Copyright (c) 2015 ecoservice GbR (<http://www.ecoservice.de>).
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    This program based on OpenERP.
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
+-->
+
+<openerp>
+  <data>
+
+    <record id="date_due_amount_inherits_invoice_form" model="ir.ui.view">
+      <field name="name">date.due.amount.inherits.invoice.form</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="arch" type="xml">
+        <field name="date_due" position="after">
+          <field name="due_amount_text"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="date_due_amount_inherits_invoice_supplier_form" model="ir.ui.view">
+      <field name="name">date.due.amount.inherits.invoice.supplier.form</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_supplier_form"/>
+      <field name="arch" type="xml">
+        <field name="date_due" position="after">
+          <field name="due_amount_text"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="view_payment_term_line_tree_payment_term" model="ir.ui.view">
+      <field name="name">account.payment.term.line.tree.payment.term</field>
+      <field name="model">account.payment.term.line</field>
+      <field name="inherit_id" ref="account.view_payment_term_line_tree"/>
+      <field name="arch" type="xml">
+        <field name="days" position="after">
+          <field name="note"/>
+          <field name="default"/>
+        </field>
+      </field>
+    </record>
+    <record id="view_payment_term_line_form_payment_term" model="ir.ui.view">
+      <field name="name">account.payment.term.line.form.payment.term</field>
+      <field name="model">account.payment.term.line</field>
+      <field name="inherit_id" ref="account.view_payment_term_line_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="/form/group" position="after">
+          <group>
+            <group>
+              <field name="note"/>
+              <field name="default"/>
+            </group>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</openerp>
