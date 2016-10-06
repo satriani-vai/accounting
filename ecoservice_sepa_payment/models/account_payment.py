@@ -22,8 +22,9 @@
 #
 ##############################################################################
 
-from openerp import api, fields, models, _
 import datetime
+
+from openerp import api, fields, models
 
 
 class AccountPayment(models.Model):
@@ -49,14 +50,14 @@ class AccountPayment(models.Model):
         super(AccountPayment, self).post()
         self.filtered('sepa_was_pending').write({'state': 'sent'})
 
-    def get_skonto_by_date(self,date_invoice,residual_amount,payment_term_id):
+    def get_skonto_by_date(self, date_invoice, residual_amount, payment_term_id):
         payment_term_lines = self.env['account.payment.term'].browse(payment_term_id).line_ids
         datetime_now = datetime.datetime.now()
 
         if type(date_invoice) is str:
-            date_invoice = datetime.datetime.strptime(date_invoice,'%Y-%m-%d')
+            date_invoice = datetime.datetime.strptime(date_invoice, '%Y-%m-%d')
 
-        _skonto = ["",residual_amount]
+        _skonto = ["", residual_amount]
         for ptl in payment_term_lines:
             # Get the max-difference in days to reach a common base, start with top ptl
             _date_until = ptl.days
@@ -69,11 +70,12 @@ class AccountPayment(models.Model):
                 _date_until = (_date_until.date() - date_invoice.date()).days
 
             # Add the difference on the invoice date
+            # TODO: forget to use in if below?
             _max_date = date_invoice + datetime.timedelta(days=_date_until)
             # Check if current date is within, escape if so.
             if datetime_now.date() <= date_invoice.date():
-                _skonto = [ptl.note,residual_amount*ptl.value_amount]
-                break;
+                _skonto = [ptl.note, residual_amount * ptl.value_amount]
+                break
         return _skonto
 
     @api.model
@@ -82,9 +84,10 @@ class AccountPayment(models.Model):
         invoice_defaults = self.resolve_2many_commands('invoice_ids', rec.get('invoice_ids'))
         if invoice_defaults and len(invoice_defaults) == 1:
             invoice = invoice_defaults[0]
+            _skonto = ["", invoice['residual']]  # prevent empty list for communication field
             if len(invoice['payment_term_id']) > 0:
-                _skonto = self.get_skonto_by_date(invoice['date_invoice'],invoice['residual'],invoice['payment_term_id'][0])
-            rec['communication'] = (invoice['reference']+" - "+_skonto[0])  or invoice['reference'] or _skonto[0]
+                _skonto = self.get_skonto_by_date(invoice['date_invoice'], invoice['residual'], invoice['payment_term_id'][0])
+            rec['communication'] = "{} - {}".format(invoice['reference'], _skonto[0]) if invoice.get('reference') and _skonto[0] else invoice.get('reference') or _skonto[0]
             rec['amount'] = _skonto[1]
         return rec
 
