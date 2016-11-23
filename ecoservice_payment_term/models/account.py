@@ -20,6 +20,8 @@
 #    OpenERP, Open Source Managemnt Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
+from inspect import getmembers
+from pprint import pprint
 
 from openerp import fields, models, api, _
 from datetime import datetime
@@ -140,3 +142,55 @@ class AccountPaymentTerm(models.Model):
             last_date = result and result[-1][0] or fields.Date.today()
             result.append((last_date, dist))
         return result
+
+
+class account_payment(models.Model):
+    _inherit = "account.payment"
+
+    @api.model
+    def default_get(self, fields):
+        rec = super(account_payment, self).default_get(fields)
+        invoice_defaults = self.resolve_2many_commands('invoice_ids', rec.get('invoice_ids'))
+        if invoice_defaults and len(invoice_defaults) == 1:
+            invoice = invoice_defaults[0]
+            rec['amount'] = self.calculate_amount(self.env['account.invoice'].browse(invoice['id']))
+        return rec
+
+    @api.one
+    @api.depends('invoice_ids', 'amount', 'payment_date', 'currency_id')
+    def _compute_payment_difference(self):
+        if len(self.invoice_ids) == 0:
+            return
+        current_amount = self.calculate_amount(self.invoice_ids)
+        if self.amount != current_amount:
+            self.amount = current_amount
+        if self.invoice_ids[0].type in ['in_invoice', 'out_refund']:
+            self.payment_difference = self.amount - self._compute_total_invoices_amount()
+        else:
+            self.payment_difference = self._compute_total_invoices_amount() - self.amount
+
+    def calculate_amount(self,invoice_id):
+        # do calculation of amount
+
+        payment_term = invoice_id.payment_term_id
+        if payment_term and invoice_id.date_invoice:
+            for term in payment_term.line_ids:
+
+                # Calculate due date with current date and payment terms
+                due_date = datetime.strptime(invoice_id.date_invoice, '%Y-%m-%d') + relativedelta(
+                    days=term.days)
+
+                value_amount = term.value_amount
+                if value_amount == 0:
+                    value_amount = 1
+                cal_amount = value_amount * invoice_id.amount_total
+
+                if self.payment_date:
+                    pay_date = datetime.strptime(self.payment_date, '%Y-%m-%d')
+                else:
+                    pay_date = datetime.now()
+
+                td = abs(due_date - pay_date)
+                if td.days > 0 and due_date >= pay_date:
+                    break;
+        return cal_amount
