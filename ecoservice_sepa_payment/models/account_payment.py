@@ -70,10 +70,9 @@ class AccountPayment(models.Model):
                 _date_until = (_date_until.date() - date_invoice.date()).days
 
             # Add the difference on the invoice date
-            # TODO: forget to use in if below?
             _max_date = date_invoice + datetime.timedelta(days=_date_until)
             # Check if current date is within, escape if so.
-            if datetime_now.date() <= date_invoice.date():
+            if datetime_now.date() <= _max_date.date():
                 _skonto = [ptl.note, residual_amount * ptl.value_amount]
                 break
         return _skonto
