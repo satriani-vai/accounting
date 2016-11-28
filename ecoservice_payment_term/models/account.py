@@ -173,6 +173,7 @@ class account_payment(models.Model):
         # do calculation of amount
 
         payment_term = invoice_id.payment_term_id
+        cal_amount = 0.0
         if payment_term and invoice_id.date_invoice:
             for term in payment_term.line_ids:
 
