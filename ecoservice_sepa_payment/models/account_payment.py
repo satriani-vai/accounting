@@ -86,7 +86,7 @@ class AccountPayment(models.Model):
             _skonto = ["", invoice['residual']]  # prevent empty list for communication field
             if invoice.get('payment_term_id'):
                 _skonto = self.get_skonto_by_date(invoice['date_invoice'], invoice['residual'], invoice['payment_term_id'][0])
-            rec['communication'] = "{} - {}".format(invoice['reference'], _skonto[0]) if invoice.get('reference') and _skonto[0] else invoice.get('reference') or _skonto[0]
+            rec['communication'] = u"{} - {}".format(unicode(invoice['reference']), _skonto[0]) if invoice.get('reference') and _skonto[0] else invoice.get('reference') or _skonto[0]
             rec['amount'] = _skonto[1]
         return rec
 

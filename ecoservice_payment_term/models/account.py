@@ -194,4 +194,6 @@ class account_payment(models.Model):
                 td = abs(due_date - pay_date)
                 if td.days > 0 and due_date >= pay_date:
                     break;
+        if not payment_term:
+            cal_amount = invoice_id.amount_total
         return cal_amount
