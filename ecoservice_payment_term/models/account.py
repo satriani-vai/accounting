@@ -162,7 +162,7 @@ class account_payment(models.Model):
         if len(self.invoice_ids) == 0:
             return
         current_amount = self.calculate_amount(self.invoice_ids)
-        if self.amount != current_amount:
+        if not self.amount:
             self.amount = current_amount
         if self.invoice_ids[0].type in ['in_invoice', 'out_refund']:
             self.payment_difference = self.amount - self._compute_total_invoices_amount()
@@ -184,7 +184,7 @@ class account_payment(models.Model):
                 value_amount = term.value_amount
                 if value_amount == 0:
                     value_amount = 1
-                cal_amount = value_amount * invoice_id.amount_total
+                cal_amount = value_amount * invoice_id.residual
 
                 if self.payment_date:
                     pay_date = datetime.strptime(self.payment_date, '%Y-%m-%d')
@@ -195,5 +195,5 @@ class account_payment(models.Model):
                 if td.days > 0 and due_date >= pay_date:
                     break;
         if not payment_term:
-            cal_amount = invoice_id.amount_total
+            cal_amount = invoice_id.residual
         return cal_amount
