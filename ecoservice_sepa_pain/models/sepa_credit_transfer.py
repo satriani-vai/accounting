@@ -144,7 +144,7 @@ class AccountSepaCreditTransfer(models.TransientModel):
             if not bank_account.bank_bic:
                 return True  # Any creditor agent is not identified by a BIC
             if not bank_account.acc_type == 'iban':
-                return True  # Any creditor account is not identified by an IBAN
+                bank_account.acc_type = 'iban'  # IBAN is the only valid option, 'bank' is depricated
         return False
 
     def _get_CdtTrfTxInf(self, PmtInfId, payment):
