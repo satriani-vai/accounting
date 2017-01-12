@@ -2,26 +2,25 @@
 
 {
     'name': 'ecoservice: SEPA Payment',
-    'version': '9.0.0.1.0',
+    'version': '9.0.0.2.0',
     'category': 'Accounting & Finance',
-    'summary': u"SEPA extension to block a payment from being booked.",
+    'summary': u"SEPA extension.",
     'description': u"""
-        When a payment is created from an invoice, it is booked (posted) immediately.
-        With this module you can specify that you want the payment to be booked later when the actual payment e.g. arrived on your bank account
-        either manually or some automated method.
+    This module is w/o function. It will be removed in one of the following commits.
+
+    Immediate uninstalling is advised to avoid problems later!
     """,
     'author': 'ecoservice GbR',
     'website': 'https://www.ecoservice.de',
     'license': 'AGPL-3',
     'depends': [
         'base',
-        'ecoservice_sepa_pain',
     ],
     'data': [
-        'views/account_invoice_view.xml',
-        'views/account_payment_view.xml',
+        # 'views/account_invoice_view.xml',
+        # 'views/account_payment_view.xml',
     ],
     'application': False,
-    'installable': True,
+    'installable': False,
     'auto_install': False
 }
