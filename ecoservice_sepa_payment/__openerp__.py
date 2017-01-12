@@ -2,7 +2,7 @@
 
 {
     'name': 'ecoservice: SEPA Payment',
-    'version': '9.0.0.2.0',
+    'version': '9.0.0.3.0',
     'category': 'Accounting & Finance',
     'summary': u"SEPA extension.",
     'description': u"""
