@@ -16,7 +16,7 @@ class account_move(osv.osv):
     _inherit = "account.move"
     _columns = {
                 'vorlauf_id': fields.many2one('ecofi', 'Export', readonly=True, ondelete='set null', select=2),
-                'ecofi_buchungstext': fields.char('Export Voucher Text', size=30),
+                'ecofi_buchungstext': fields.char('Export Voucher Text', size=60),
                 'ecofi_manual': fields.boolean('Set Counteraccounts manual'),
                 'ecofi_autotax': fields.boolean('Automatic Tax Lines'),
     }
@@ -240,7 +240,7 @@ class account_invoice(osv.osv):
     """
     _inherit = 'account.invoice'
     _columns = {
-                'ecofi_buchungstext': fields.char('Export Voucher Text', size=30),
+                'ecofi_buchungstext': fields.char('Export Voucher Text', size=60),
     }
 
     def action_move_create(self, cr, uid, ids, *args):
