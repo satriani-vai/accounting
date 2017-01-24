@@ -37,8 +37,8 @@ class AccountMove(models.Model):
     _inherit = "account.move"
     _columns = {
                 'vorlauf_id': fields.many2one('ecofi', 'Export', readonly=True, ondelete='set null', select=2),
-                'ecofi_buchungstext': fields.char('Export Voucher Text', size=30),
-                'ecofi_manual': fields.boolean('Set Counteraccounts manual'),
+                'ecofi_buchungstext': fields.char('Export Voucher Text', size=60),
+                'ecofi_manual': fields.boolean('Set the counter account manually', help='Prevents the counter account being overwritten'),
                 'ecofi_autotax': fields.boolean('Automatic Tax Lines'),
     }
  
@@ -263,7 +263,7 @@ class account_invoice(models.Model):
     """
     _inherit = 'account.invoice'
     _columns = {
-                'ecofi_buchungstext': fields.char('Export Voucher Text', size=30),
+                'ecofi_buchungstext': fields.char('Export Voucher Text', size=60),
     }
 
     @api.multi
