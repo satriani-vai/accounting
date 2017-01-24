@@ -70,6 +70,16 @@ msgid "Manual"
 msgstr "Manual"
 
 #. module: ecoservice_financeinterface
+#: model:ir.model.fields,field_description:ecoservice_financeinterface.field_account_move_ecofi_manual
+msgid "Set the counter account manually"
+msgstr "Gegenkonto manuell setzen"
+
+#. module: ecoservice_financeinterface
+#: model:ir.model.fields,help:ecoservice_financeinterface.field_account_move_ecofi_manual
+msgid "Prevents the counter account being overwritten"
+msgstr "Verhindert das automatische Überschreiben der Gegenkonten"
+
+#. module: ecoservice_financeinterface
 #: model:ir.model,name:ecoservice_financeinterface.model_export_ecofi
 msgid "Financeexport"
 msgstr "Financeexport"
