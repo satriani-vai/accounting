@@ -17,7 +17,7 @@ class account_move(osv.osv):
     _columns = {
                 'vorlauf_id': fields.many2one('ecofi', 'Export', readonly=True, ondelete='set null', select=2),
                 'ecofi_buchungstext': fields.char('Export Voucher Text', size=60),
-                'ecofi_manual': fields.boolean('Set Counteraccounts manual'),
+                'ecofi_manual': fields.boolean('Set the counter account manually', help='Prevents the counter account being overwritten'),
                 'ecofi_autotax': fields.boolean('Automatic Tax Lines'),
     }
 
