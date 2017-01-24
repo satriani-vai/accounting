@@ -70,6 +70,16 @@ msgid "Manual"
 msgstr "Manual"
 
 #. module: ecoservice_financeinterface
+#: field:account.move,ecofi_manual:0
+msgid "Set the counter account manually"
+msgstr "Gegenkonto manuell setzen"
+
+#. module: ecoservice_financeinterface
+#: help:account.move,ecofi_manual:0
+msgid "Prevents the counter account being overwritten"
+msgstr "Verhindert das automatische Überschreiben der Gegenkonten"
+
+#. module: ecoservice_financeinterface
 #: field:ecofi,zeitraum:0
 msgid "Period"
 msgstr "Zeitraum"
