@@ -31,7 +31,7 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
 	            <notebook position="inside">
-	            	<page string="Financeinterface">
+	            	<page string="Financeinterface" name="financeinterface">
 	            		<group>
 		                	<field name="finance_interface" colspan ="4"/>
 		                	<field name="journal_ids" colspan ="4"/>
