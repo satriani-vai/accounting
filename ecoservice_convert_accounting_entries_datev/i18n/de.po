@@ -44,5 +44,5 @@ msgstr "Buchungssätze konvertiert"
 #: code:addons/addons/ecoservice/git-addons/accounting/ecoservice_convert_accounting_entries_datev/models/res_company.py:36
 #: code:addons/ecoservice_convert_accounting_entries_datev/models/res_company.py:36
 #, python-format
-msgid "{id} {name} --> is not converted"
-msgstr "{id} {name} --> ist konvertiert"
+msgid "Exception: {move} --> {exception}\n"
+msgstr "Fehler: {move} --> {exception}\n"
