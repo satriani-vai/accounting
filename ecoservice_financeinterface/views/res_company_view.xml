@@ -30,14 +30,14 @@
       <field name="model">res.company</field>
       <field name="inherit_id" ref="base.view_company_form"/>
       <field name="arch" type="xml">
-        <page string="Configuration" position="after">
-          <page string="Financeinterface">
+        <notebook position="inside">
+          <page string="Financeinterface" name="financeinterface">
             <group>
-              <field name="finance_interface"/>
-              <field name="journal_ids"/>
+              <field name="finance_interface" colspan="4"/>
+              <field name="journal_ids" colspan="4"/>
             </group>
           </page>
-        </page>
+        </notebook>
       </field>
     </record>
 
