@@ -32,9 +32,9 @@ class ResCompany(models.Model):
                     try:
                         move.button_cancel()
                         move.post()
-                    except:
-                        msg.append(_(u'{id} {name} --> is not converted').format(id=move.id, name=move.name,
-                                                                                 journal=move.journal_id.name))
+                    except Exception as E:
+                        msg.append(_(u'Exception: {move} --> {exception}\n').format(move=move.name, exception=E[1]))
+
             if not journal_update_posted_pre:
                 journal.update_posted = journal_update_posted_pre
 
