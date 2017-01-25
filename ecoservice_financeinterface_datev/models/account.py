@@ -152,7 +152,7 @@ class account_move(models.Model):
     def finance_interface_checks(self, cr, uid, ids, context=None):
         context = context or dict()
         res = True
-        if 'invoice' in context and context['invoice'].enable_datev_checks:
+        if 'invoice' not in context or context['invoice'] and context['invoice'].enable_datev_checks:
             for move in self.browse(cr, uid, ids, context=context):
                 if move.enable_datev_checks and self.pool.get('res.users').browse(cr, uid, uid, context=context).company_id.enable_datev_checks:
                     res &= super(account_move, self).finance_interface_checks(cr, uid, ids, context=context)
