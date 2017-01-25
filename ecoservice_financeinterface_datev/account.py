@@ -80,7 +80,6 @@ class account_move(orm.Model):
         linecount = 0
         self.update_line_autoaccounts_tax(cr, uid, move, context=context)
         for line in move.line_id:
-            print '###', line.account_tax_id,'###', line.ecofi_taxid
             linecount += 1
             if line.account_id.id != line.ecofi_account_counterpart.id:
                 if not self.pool.get('ecofi').is_taxline(cr, line.account_id.id) or line.ecofi_bu == 'SD':
@@ -184,7 +183,7 @@ class account_move(orm.Model):
     def finance_interface_checks(self, cr, uid, ids, context=None):
         context = context or dict()
         res = True
-        if 'invoice' in context and context['invoice'] and context['invoice'].enable_datev_checks:
+        if 'invoice' not in context or context['invoice'] and context['invoice'].enable_datev_checks:
             for move in self.browse(cr, uid, ids, context=context):
                 if move.enable_datev_checks and self.pool.get('res.users').browse(cr, uid, uid, context=context).company_id.enable_datev_checks:
                     res &= super(account_move, self).finance_interface_checks(cr, uid, ids, context=context)
