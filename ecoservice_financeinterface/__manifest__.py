@@ -16,13 +16,13 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 {  # pylint: disable-msg=W0104
     "name": "ecoservice: Financial Interface",
-    "version": "1.0",
+    "version": "10.0.0.0.0",
     "depends": ["base", "account"],
     "author": "ecoservice",
     "website": "http://www.ecoservice.de",
