@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-""" The account module extends the original OpenERP account objects with different attributes and methods
+""" The account module extends the original Odoo account objects with different attributes and methods
 """
 ##############################################################################
 #    ecoservice_financeinterface
@@ -18,17 +18,17 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 
-from openerp.osv import fields, osv
-from openerp import api, models
-from openerp.tools.translate import _
-from openerp.tools import ustr
-from openerp.tools.float_utils import float_round
-import openerp.addons.decimal_precision as dp
+from odoo.osv import fields, osv
+from odoo import api, models
+from odoo.tools.translate import _
+from odoo.tools import ustr
+from odoo.tools.float_utils import float_round
+import odoo.addons.decimal_precision as dp
 
 
 class AccountMove(models.Model):
