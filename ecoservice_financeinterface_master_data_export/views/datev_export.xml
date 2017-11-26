@@ -17,12 +17,12 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 -->
-<openerp>
+<odoo>
 	<data>
 	
 	<record model="ir.ui.view" id="ecofi_datev_spalten_form_view">
@@ -111,4 +111,4 @@
     </record>
   	<menuitem action="ecofi_datev_formate_all" id="menu_ecofi_datev_formate" groups="ecoservice_financeinterface.group_ecofi_financeinterface" parent="ecoservice_financeinterface.menu_finance_interface"/>
   	</data>
-</openerp>
+</odoo>
