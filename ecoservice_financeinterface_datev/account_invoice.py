@@ -18,13 +18,13 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 #
 ###############################################################################
 
-from openerp import api, fields, models, _
+from odoo import api, fields, models, _
 from . import exceptions
 
 
@@ -55,7 +55,7 @@ class AccountInvoice(models.Model):
                             line.perform_datev_validation(line_no=line_no)
                         except exceptions.DatevWarning as dw:
                             is_valid = False
-                            from openerp.exceptions import except_orm
+                            from odoo.exceptions import except_orm
                             errors.append(dw.name if isinstance(dw, except_orm) else dw.message)
 
         if not (silent or is_valid):
