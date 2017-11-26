@@ -16,16 +16,16 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 import datetime
 
-from openerp import tools
-from openerp.tests.common import TransactionCase
+from odoo import tools
+from odoo.tests.common import TransactionCase
 
-from openerp import netsvc
+from odoo import netsvc
 
 import base64
 import cStringIO
