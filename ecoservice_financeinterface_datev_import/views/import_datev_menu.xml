@@ -3,7 +3,7 @@
 # This file is part of Odoo. The COPYRIGHT file at the top level of
 # this module contains the full copyright and licensing details.
 -->
-<openerp>
+<odoo>
   <data>
 
     <record id="import_datev_action" model="ir.actions.act_window">
@@ -16,4 +16,4 @@
     <menuitem action="import_datev_action" id="datev_import_menu" parent="ecoservice_financeinterface.menu_finance_interface" sequence="20" groups="ecoservice_financeinterface.group_ecofi_financeinterface"/>
 
   </data>
-</openerp>
+</odoo>
