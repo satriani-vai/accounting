@@ -4,7 +4,7 @@
 # noinspection PyStatementEffect
 {
     "name"       : "ecoservice: DATEV Import",
-    "version"    : "9.0.1.0.0",
+    "version"    : "10.0.0.0.0",
     "licence"    : "AGPL-3",
     "author"     : "ecoservice",
     "website"    : "https://www.ecoservice.de/",
