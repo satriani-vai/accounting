@@ -3,7 +3,7 @@
 # This file is part of Odoo. The COPYRIGHT file at the top level of
 # this module contains the full copyright and licensing details.
 -->
-<openerp>
+<odoo>
   <data>
 
     <record model="ir.ui.view" id="import_datev_log_form_view">
@@ -82,4 +82,4 @@
     </record>
 
   </data>
-</openerp>
+</odoo>
