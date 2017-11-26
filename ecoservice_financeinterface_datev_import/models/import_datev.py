@@ -11,9 +11,9 @@ import traceback
 from datetime import datetime
 from decimal import Decimal
 
-from openerp import fields, osv, models
-from openerp.tools import ustr
-from openerp.tools.translate import _
+from odoo import fields, osv, models
+from odoo.tools import ustr
+from odoo.tools.translate import _
 
 
 class ImportDatev(models.Model):
