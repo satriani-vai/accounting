@@ -3,7 +3,7 @@
 # See COPYRIGHT and LICENSE at the root directory of this module for full copyright and licensing details.
 
 
-from openerp import api, fields, models, _
+from odoo import api, fields, models, _
 from datetime import datetime
 
 
