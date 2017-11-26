@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-""" The ecofi module extends the original OpenERP ecofi objects with different attributes and methods
+""" The ecofi module extends the original Odoo ecofi objects with different attributes and methods
 """
 ##############################################################################
 #    ecoservice_financeinterface_datev
@@ -18,15 +18,15 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
-from openerp.osv import orm
+from odoo.osv import orm
 from decimal import Decimal
-from openerp.tools.translate import _
-from openerp.tools import ustr
-from openerp import workflow
+from odoo.tools.translate import _
+from odoo.tools import ustr
+from odoo import workflow
 import logging
 
 _logger = logging.getLogger(__name__)
