@@ -3,7 +3,7 @@
 # This file is part of Odoo. The COPYRIGHT file at the top level of
 # this module contains the full copyright and licensing details.
 -->
-<openerp>
+<odoo>
   <data noupdate="1">
 
     <record id="seq_eco_ecofi_vorlauf" model="ir.sequence">
@@ -16,4 +16,4 @@
     </record>
 
   </data>
-</openerp>
+</odoo>
