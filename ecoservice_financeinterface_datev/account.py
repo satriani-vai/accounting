@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-""" The account module extends the original OpenERP account objects with different attributes and methods
+""" The account module extends the original Odoo account objects with different attributes and methods
 """
 ##############################################################################
 #    ecoservice_financeinterface_datev
@@ -18,12 +18,12 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#    This program based on OpenERP.
-#    OpenERP, Open Source Management Solution
+#    This program based on Odoo.
+#    Odoo, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 ##############################################################################
 
-from openerp import models, fields, _
+from odoo import models, fields, _
 from decimal import Decimal
 from . import exceptions
 
